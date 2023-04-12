@@ -21,7 +21,7 @@ local astroevent = utils.event
 function M.update(pkg_names, auto_install)
   pkg_names = pkg_names or {}
   if type(pkg_names) == "string" then pkg_names = { pkg_names } end
-  if auto_install == nil then auto_install = true end
+  if auto_install == nil then auto_install = false end
   local registry_avail, registry = pcall(require, "mason-registry")
   if not registry_avail then
     vim.api.nvim_err_writeln "Unable to access mason registry"

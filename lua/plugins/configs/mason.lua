@@ -1,4 +1,5 @@
 return function(_, opts)
+  opts.ensured_installed = {}
   require("mason").setup(opts)
 
   -- TODO: AstroNvim v4: change these auto command names to not conflict with core Mason commands
